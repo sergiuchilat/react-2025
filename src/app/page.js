@@ -2,9 +2,10 @@
 import React from 'react';
 import Icon from '@mdi/react';
 //import { mdiAccount, mdiBlockHelper } from '@mdi/js';
-import TodoAdd from './components/TodoAdd';
-import TodoList from './components/TodoList';
-import NavBar from './components/NavBar';
+import TodoAdd from '../components/todo/TodoAdd';
+import TodoList from '../components/todo/TodoList';
+import NavBar from '../components/layout/NavBar';
+import Footer from '@/components/layout/Footer';
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <NavBar/>
       <TodoAdd />
       <TodoList />
+      <Footer/>
     </>
   );
   

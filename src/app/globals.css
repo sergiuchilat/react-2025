@@ -4,6 +4,12 @@ nav ul{
   list-style-type: none;
   padding: 0;
   margin: 0;
+  background-color: blueviolet;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
 }
 
 .todo-list {
@@ -15,4 +21,10 @@ nav ul{
   color: green;
   font-weight: bold;
   margin: 0 1em;
+}
+
+footer{
+  text-align: center;
+  margin-top: 1em;
+  background-color: blue;
 }
