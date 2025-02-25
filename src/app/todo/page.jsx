@@ -1,3 +1,4 @@
+'use client';
 import NavBar from "@/components/layout/NavBar";
 import TodoAdd from '@/components/todo/TodoAdd';
 import TodoList from '@/components/todo/TodoList';
@@ -24,13 +25,26 @@ export default function TodoPage() {
         }
     ]
 
+    const onDelete = (id) => {
+        console.log('Delete todo with id: ', id);
+    }
+
+    const onComplete = (id) => {
+        console.log('Mark todo as completed with id: ', id);
+    }
+
 
     return (
         <>
             <NavBar />
 
             <TodoAdd />
-            <TodoList todoList={todoList} canEdit={true} />
+            <TodoList 
+                todoList={todoList} 
+                canEdit={true}
+                onDelete= {onDelete}
+                onComplete= {onComplete}
+            />
         </>
     );
 

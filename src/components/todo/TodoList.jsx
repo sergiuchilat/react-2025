@@ -3,14 +3,14 @@
 import Icon from '@mdi/react';
 import { mdiCheck, mdiClose } from '@mdi/js';
 
-export default function TodoList({ todoList, canEdit }) {
+export default function TodoList({ todoList, canEdit, onDelete, onComplete }) {
 
     function deleteTodoHandler(id) {
-        console.log('Delete todo with id: ', id);
+        onDelete(id);
     }
 
     function markAsCompletedHandler(id) {
-        console.log('Mark todo as completed with id: ', id);
+        onComplete(id);
     }
 
     return (
