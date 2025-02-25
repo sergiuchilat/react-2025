@@ -12,14 +12,14 @@ export default function Home() {
     {
         id: 1,
         text: 'Sa nu uit sa maninc',
-        completed: true,
-        color: 'green'
+        completed: false,
+        color: 'red'
     },
     {
         id: 2,
         text: 'Sa nu fac temele de acasa la web I',
-        completed: true,
-        color: 'green'
+        completed: false,
+        color: 'red'
     }
 ]
 

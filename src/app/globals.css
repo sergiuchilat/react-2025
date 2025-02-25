@@ -23,11 +23,11 @@ nav ul li a{
   justify-content: space-between;
   padding: 1em;
   border-bottom: 1px solid #ccc;
-  text-decoration: line-through;
+  text-decoration: none;
 }
 
 .todo-list li.completed{
-  text-decoration: none;
+  text-decoration: line-through;
 }
 
 .todo-list button{
