@@ -10,11 +10,23 @@ nav ul{
 nav ul li a{
   text-decoration: none;
   color: white;
+  ;
 }
 
 .todo-list {
   list-style-type: none;
   padding: 0;
+}
+
+.todo-list li{
+  display: flex;
+  padding: 1em;
+  border-bottom: 1px solid #ccc;
+  text-decoration: line-through;
+}
+
+.todo-list li.completed{
+  text-decoration: none;
 }
 
 .checkbox{
@@ -28,3 +40,4 @@ footer{
   margin-top: 1em;
   background-color: blue;
 }
+
