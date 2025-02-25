@@ -20,6 +20,7 @@ nav ul li a{
 
 .todo-list li{
   display: flex;
+  justify-content: space-between;
   padding: 1em;
   border-bottom: 1px solid #ccc;
   text-decoration: line-through;
@@ -27,6 +28,11 @@ nav ul li a{
 
 .todo-list li.completed{
   text-decoration: none;
+}
+
+.todo-list button{
+ border-radius: 50%;
+ border: none;
 }
 
 .checkbox{

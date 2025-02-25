@@ -30,7 +30,7 @@ export default function TodoPage() {
             <NavBar />
 
             <TodoAdd />
-            <TodoList todoList={todoList} />
+            <TodoList todoList={todoList} canEdit={true} />
         </>
     );
 
