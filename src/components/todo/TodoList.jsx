@@ -1,28 +1,7 @@
 import Icon from '@mdi/react';
 import { mdiCheck, mdiClose } from '@mdi/js';
 
-export default function TodoList() {
-
-    const todoList = [
-        {
-            id: 1,
-            text: 'Sa nu uit sa maninc',
-            completed: true,
-            color: 'green'
-        },
-        {
-            id: 2,
-            text: 'Sa nu fac temele de acasa la web I',
-            completed: true,
-            color: 'green'
-        },
-        {
-            id: 3,
-            text: 'Sa nu uit sa ma duc la sala',
-            completed: false,
-            color: 'red'
-        }
-    ]
+export default function TodoList({ todoList }) {
 
     return (
         <ul className="todo-list">
