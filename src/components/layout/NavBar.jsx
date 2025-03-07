@@ -15,6 +15,9 @@ export default function NavBar() {
                     <a href="/photos">Photos</a>
                 </li>
                 <li>
+                    <a href="/useeffect">Use effect</a>
+                </li>
+                <li>
                     <a href="/contact">Contact</a>
                 </li>
             </ul>
