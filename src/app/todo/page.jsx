@@ -2,28 +2,27 @@
 import NavBar from "@/components/layout/NavBar";
 import TodoAdd from '@/components/todo/TodoAdd';
 import TodoList from '@/components/todo/TodoList';
+import { useEffect, useState } from "react";
 
 export default function TodoPage() {
-    const todoList = [
-        {
-            id: 1,
-            text: 'Sa nu uit sa maninc',
-            completed: false,
-            color: 'red'
-        },
-        {
-            id: 2,
-            text: 'Sa nu fac temele de acasa la web I',
-            completed: false,
-            color: 'red'
-        },
-        {
-            id: 3,
-            text: 'Sa nu uit sa ma duc la sala',
-            completed: true,
-            color: 'green'
-        }
-    ]
+    const [todoList, setTodoList] = useState([]);
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(response => response.json())
+            .then(json => {
+                console.log(json)
+                setTodoList(json.map(todo => {
+                    return {
+                        id: todo.id,
+                        text: todo.title,
+                        completed: false,
+                        color: 'red'
+                    }
+                }));
+                console.log('Todo list: ', todoList);
+            });
+    }, []);
 
     const onDelete = (id) => {
         console.log('Delete todo with id: ', id);
@@ -39,11 +38,12 @@ export default function TodoPage() {
             <NavBar />
 
             <TodoAdd />
-            <TodoList 
-                todoList={todoList} 
+            { todoList.length < 1 && <div id="loading">Loading ...</div>}
+            <TodoList
+                todoList={todoList}
                 canEdit={true}
-                onDelete= {onDelete}
-                onComplete= {onComplete}
+                onDelete={onDelete}
+                onComplete={onComplete}
             />
         </>
     );

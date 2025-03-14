@@ -21,9 +21,6 @@ export default function UseEffectPage() {
     useEffect(() => {
         console.log('useEffect called when component is mounted or updated');   
 
-        return () => {
-            alert('Goodbye! Component is unmounted');
-        }
     });
 
     useEffect(() => {
@@ -48,7 +45,7 @@ export default function UseEffectPage() {
 
     useEffect(() => {
         console.log('useEffect called only once when the component is mounted');
-        alert('Welcome to this page! Component is mounted');
+        //alert('Welcome to this page! Component is mounted');
     }, [])
 
 
