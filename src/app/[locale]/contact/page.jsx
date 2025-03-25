@@ -1,6 +1,6 @@
 'use client'
 import Footer from '@/components/layout/Footer.jsx';
-import NavBar from '../../components/layout/NavBar.jsx';
+import NavBar from '../../../components/layout/NavBar.jsx';
 import { useState } from 'react';
 
 export default function ContactPage() {

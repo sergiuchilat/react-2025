@@ -1,12 +1,15 @@
 //import styles from "./page.module.css";
 import React from 'react';
 
+import {useTranslations} from "next-intl";
+
 import NavBar from '@/components/layout/NavBar';
 import Footer from '@/components/layout/Footer';
 import TodoList from '@/components/todo/TodoList';
 
 
 export default function Home() {
+  const t = useTranslations('');
 
   const todoList = [
     {
@@ -29,6 +32,7 @@ export default function Home() {
       <h1>This is a Todo web application</h1>
       <TodoList todoList={todoList} canEdit={false} />  
       <p>
+        {t('helloMessage')}
         This is a simple Todo app made with React.
       </p>
       <Footer/>

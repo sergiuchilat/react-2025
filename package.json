@@ -12,7 +12,9 @@
     "@mdi/js": "^7.4.47",
     "@mdi/react": "^1.6.1",
     "next": "15.1.6",
+    "next-intl": "^4.0.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-i18next": "15.4.1"
   }
 }
