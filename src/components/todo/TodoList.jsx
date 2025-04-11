@@ -2,6 +2,9 @@
 
 import Icon from '@mdi/react';
 import { mdiCheck, mdiClose } from '@mdi/js';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+import CheckIcon from '@mui/icons-material/Check';
 
 export default function TodoList({ todoList, canEdit, onDelete, onComplete }) {
 
@@ -27,14 +30,28 @@ export default function TodoList({ todoList, canEdit, onDelete, onComplete }) {
                             canEdit ? (
                                 <div className='actions'>
                                     {
-                                        todo.completed ? '' : <button onClick={() => {markAsCompletedHandler(todo.id)}}>
-                                            <Icon path={mdiCheck} size={1} color='green' />
-                                        </button>
+                                        todo.completed ? '' :
+                                        
+                                        <IconButton
+                                            aria-label="check"
+                                            color='success'
+                                            onClick={() => { markAsCompletedHandler(todo.id) }}
+                                        >
+                                            <CheckIcon/>
+                                        </IconButton>
+                            
                                     }
                                     {
-                                        todo.completed ? '' : <button onClick={() => {deleteTodoHandler(todo.id)}}>
-                                            <Icon path={mdiClose} size={1} color='red' />
-                                        </button>
+                                        todo.completed ? '' :
+
+                                            <IconButton
+                                             aria-label="delete" 
+                                             color='error'
+                                             onClick={() => { deleteTodoHandler(todo.id) }}
+                                             >
+                                                <DeleteIcon />
+                                            </IconButton>
+
                                     }
                                 </div>
                             ) : ''
