@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from '@/i18n/routing';
 
-const pages = ['About', 'Photos', 'Todo', "Contact". "Deploy test"];
+const pages = ['About', 'Photos', 'Todo', "Contact", "Deploy test"];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
